@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <!-- budget enter -->
+
+      <div class="budget">
+        <h2>Budget</h2>
+        <p id="error">value can't be negative or zero</p>
+        <input
+          type="number"
+          placeholder="Enter total amount"
+          id="budget_input"
+        />
+        <button id="set_budget_btn" onclick="set_budget_func()">
+          Set Budget
+        </button>
+      </div>
+
+      <!-- Expense enter -->
+
+      <div class="expense">
+        <h2>Expenses</h2>
+        <input
+          type="text"
+          placeholder="Enter title product"
+          id="expense_name"
+        />
+        <input
+          type="number"
+          placeholder="Enter cost of product"
+          id="expense_amount"
+        />
+        <input type="date" id="exp_date" />
+        <button id="set_budget_btn" onclick="expense_update_func()">
+          Check Amount
+        </button>
+      </div>
+    </div>
+    <!-- table for budget expense and balance -->
+    <div class="table">
+      <div class="total_budget">
+        <h2>Total Budget</h2>
+        <span id="budget_update">0</span>
+      </div>
+      <div class="total_expense">
+        <h2>Expenses</h2>
+        <span id="expense_update">0</span>
+      </div>
+      <div class="total_balance">
+        <h2>Balance</h2>
+        <span id="balance_update">0</span>
+      </div>
+    </div>
+    <!-- expense list -->
+    <div class="list">
+      <h3>Expense list</h3>
+      <div class="list_main">
+        <div id="expense_list"></div>
+        <div id="expense_cost_list"></div>
+        <div id="date1"></div>
+        <div id="edit_delete_btn"></div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
